@@ -1,0 +1,134 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+    <display-name>retailservice</display-name>
+    <servlet>
+        <description></description>
+        <display-name>LoginController</display-name>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>retailservice.controller.LoginController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>LogoutController</display-name>
+        <servlet-name>LogoutController</servlet-name>
+        <servlet-class>retailservice.controller.LogoutController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutController</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>ProfileController</display-name>
+        <servlet-name>ProfileController</servlet-name>
+        <servlet-class>retailservice.controller.ProfileController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProfileController</servlet-name>
+        <url-pattern>/manage/Profile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>ProductController</display-name>
+        <servlet-name>ProductController</servlet-name>
+        <servlet-class>retailservice.controller.ProductController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductController</servlet-name>
+        <url-pattern>/manage/Product</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>StoreController</display-name>
+        <servlet-name>StoreController</servlet-name>
+        <servlet-class>retailservice.controller.StoreController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StoreController</servlet-name>
+        <url-pattern>/manage/Store</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>EmployeeController</display-name>
+        <servlet-name>EmployeeController</servlet-name>
+        <servlet-class>retailservice.controller.EmployeeController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmployeeController</servlet-name>
+        <url-pattern>/manage/Employee</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>ReceiptController</display-name>
+        <servlet-name>ReceiptController</servlet-name>
+        <servlet-class>retailservice.controller.ReceiptController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReceiptController</servlet-name>
+        <url-pattern>/manage/Receipt</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>CheckoutController</display-name>
+        <servlet-name>CheckoutController</servlet-name>
+        <servlet-class>retailservice.controller.CheckoutController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckoutController</servlet-name>
+        <url-pattern>/manage/Checkout</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- REST Mappings -->
+    <servlet>
+        <servlet-name>StoreControllerREST</servlet-name>
+        <servlet-class>retailservice.restful.controller.StoreController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StoreControllerREST</servlet-name>
+        <url-pattern>/restful/store</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProductControllerREST</servlet-name>
+        <servlet-class>retailservice.restful.controller.ProductController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductControllerREST</servlet-name>
+        <url-pattern>/restful/product</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EmployeeControllerREST</servlet-name>
+        <servlet-class>retailservice.restful.controller.EmployeeController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmployeeControllerREST</servlet-name>
+        <url-pattern>/restful/employee</url-pattern>
+    </servlet-mapping>
+
+    <!-- Filter Mappings -->
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>retailservice.filter.LoginFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <!--<url-pattern>/manage/*</url-pattern>-->
+        <url-pattern>*.test</url-pattern>
+
+    </filter-mapping>
+
+
+</web-app>
