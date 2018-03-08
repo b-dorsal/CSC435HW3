@@ -117,6 +117,15 @@
         <url-pattern>/restful/employee</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ReceiptControllerREST</servlet-name>
+        <servlet-class>retailservice.restful.controller.ReceiptController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReceiptControllerREST</servlet-name>
+        <url-pattern>/restful/receipt</url-pattern>
+    </servlet-mapping>
+
     <!-- Filter Mappings -->
     <filter>
         <filter-name>LoginFilter</filter-name>
@@ -125,8 +134,8 @@
 
     <filter-mapping>
         <filter-name>LoginFilter</filter-name>
-        <!--<url-pattern>/manage/*</url-pattern>-->
-        <url-pattern>*.test</url-pattern>
+        <url-pattern>/manage/*</url-pattern>
+        <!--<url-pattern>*.test</url-pattern>-->
 
     </filter-mapping>
 
